@@ -12,6 +12,7 @@ namespace PierresBakery.Models
       NumberOfLoaves = userOrder;
     }
 
+    // calculate total cost of user's bread order
     public int Order()
     {
       // calculate how many loaves in the order is free = 
