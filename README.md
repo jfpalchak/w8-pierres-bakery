@@ -17,16 +17,23 @@
 
 ## Setup/Installation Requirements
 
-1. Clone this repo.
-2. Open your terminal and navigate to this project's production directory called `ShapeTracker`.
+1. Copy the **[URL](<[#link](https://github.com/jfpalchak/w8-pierres-bakery.git)>)** provided for this repository.
+2. Open Terminal.
+3. Change your working directory to where you want the cloned directory.
+4. In your terminal, type `git clone` and use the copied URL from Step 1. Or, copy the following git command:
+
+```bash
+$ git clone https://github.com/jfpalchak/w8-pierres-bakery.git
+```
+2. Open your terminal and navigate to this project's production directory called `PierresBakery`.
 3. In the command line, run the command `dotnet run` to compile and execute the console application. Since this is a console application, you'll interact with it through text commands in your terminal.
-4. Optionally, you can run `dotnet build` to compile this console app without running it.
-5. Navigate to test directory, `PROJECT.Tests`.
-6. In the command line, run the command `dotnet test` to execute the tests.
+   1. Optionally, you can run `dotnet build` to compile this console app without running it.
+4. To run tests on the project's models, navigate to test directory, `PierresBakery.Tests`.
+5. In the command line, run the command `dotnet test` to execute tests.
 
 ## Known Bugs
 
-* No known bugs at this state. Please contact author if any bugs are found.
+* If the user continues to enter additional purchases to their order, an item's discount will *not* be applied if that item is purchased _individually_.
 
 ## License
 
