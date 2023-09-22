@@ -47,9 +47,10 @@ $ git clone https://github.com/jfpalchak/w8-pierres-bakery.git
 ```bash
 $ dotnet run
 ```
-Since this is a console application, you'll interact with it through text commands in your terminal.
-   1. Optionally, you can run `dotnet build` to compile this console app without running it.
-7. To run tests on the project's models, navigate to test directory, `PierresBakery.Tests`.
+> Since this is a console application, you'll interact with it through text commands in your terminal.
+> Optionally, you can run `dotnet build` to compile this console app without running it.
+
+7. To run tests on the project's models, navigate to the test directory, `PierresBakery.Tests`.
 8. In the command line, run the following command to execute tests:
 ```bash
 $ dotnet test
