@@ -11,7 +11,7 @@ namespace PierresBakery.Models
     {
       // Arrange
       // Act
-      Bread newBread = new Bread();
+      Bread newBread = new Bread(3);
       // Assert
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
@@ -22,7 +22,7 @@ namespace PierresBakery.Models
       int numOfLoaves = 3;
       Bread newBread = new Bread(numOfLoaves);
 
-      int result = newBread.GetNumberOfLoaves();
+      int result = newBread.NumberOfLoaves;
 
       Assert.AreEqual(numOfLoaves, result);
     }
