@@ -26,7 +26,18 @@ namespace PierresBakery.Models
       Assert.AreEqual(2, price);
     }
 
-    // STATIC NTH PASTRY FREE
+    [TestMethod]
+    public void SetPrice_SetsPriceValueOfPastry_Void()
+    {
+      Pastry newPastry = new Pastry();
+      int newPrice = 10;
+
+      newPastry.Price = newPrice;
+      
+      Assert.AreEqual(newPrice, newPastry.Price);
+    }
+
+    // INHERITED NTH ITEM FREE PROPERTY
     [TestMethod]
     public void GetNthItemFree_ReturnsNthPastryThatIsFree_Int()
     {
@@ -37,7 +48,18 @@ namespace PierresBakery.Models
       Assert.AreEqual(4, nthPastryFree);
     }
 
-    // STATIC ORDER METHOD
+    [TestMethod]
+    public void SetNthItemFree_SetsValueOfNthPastryThatIsFree_Void()
+    {
+      Pastry newPastry = new Pastry();
+      int newDeal = 10;
+
+      newPastry.NthItemFree = newDeal;
+
+      Assert.AreEqual(newDeal, newPastry.NthItemFree);
+    }
+
+    // INHERITED ORDER METHOD
     [TestMethod]
     public void Order_ReturnsCostOfSinglePastry_Int()
     {
