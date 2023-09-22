@@ -63,5 +63,16 @@ namespace PierresBakery.Models
 
       Assert.AreEqual(10, cost);
     }
+
+    [TestMethod]
+    public void Order_ReturnsTotalCostOfThreeLoaves_int()
+    {
+      Bread newBread = new Bread(3);
+
+      int cost = newBread.Order();
+
+      Assert.AreEqual(10, cost);
+    }
+
   }
 }
