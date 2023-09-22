@@ -9,10 +9,8 @@ namespace PierresBakery.Models
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      // Arrange
-      // Act
       Bread newBread = new Bread(3);
-      // Assert
+
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
@@ -25,6 +23,17 @@ namespace PierresBakery.Models
       int result = newBread.NumberOfLoaves;
 
       Assert.AreEqual(numOfLoaves, result);
+    }
+
+    [TestMethod]
+    public void SetNumberOfLoaves_ReturnsNumberOfLoaves_Void()
+    {
+      Bread newBread = new Bread(3);
+      int newOrder = 5;
+
+      newBread.NumberOfLoaves = newOrder;
+      
+      Assert.AreEqual(newOrder, newBread.NumberOfLoaves);
     }
 
   }
