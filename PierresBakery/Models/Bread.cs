@@ -4,7 +4,7 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    // auto-implemented property
+    public int Price { get; } = 5;
     public int NumberOfLoaves { get; set; }
 
     // constructor
