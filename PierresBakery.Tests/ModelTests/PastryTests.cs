@@ -9,7 +9,7 @@ namespace PierresBakery.Models
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastry = new Pastry();
+      Pastry newPastry = new Pastry(3);
 
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
