@@ -40,9 +40,9 @@ namespace PierresBakery
 
         Console.WriteLine("              Here's your order:");
         Console.WriteLine(" ---------------------------------------------");
-        Console.WriteLine("            Bread Order: {0:C}", breadCost);
-        Console.WriteLine("           Pastry Order: {0:C}", pastryCost);
-        Console.WriteLine("       Total Order Cost: {0:C}", breadCost + pastryCost);
+        Console.WriteLine("              Bread Order: {0:C}", breadCost);
+        Console.WriteLine("             Pastry Order: {0:C}", pastryCost);
+        Console.WriteLine("         Total Order Cost: {0:C}", breadCost + pastryCost);
         Console.WriteLine(" ---------------------------------------------");
         AskUserToContinue();
       }
@@ -58,8 +58,7 @@ namespace PierresBakery
 
     static void AskUserToContinue()
     {
-      Console.WriteLine("..............................................");
-      Console.WriteLine("      Would you like to add more items?");
+      Console.WriteLine("    Would you like to purchase more items?");
       Console.WriteLine("       To add more, type 'y' or 'yes'.");
       Console.WriteLine("        To exit, enter any other key.");
       string userInput = Console.ReadLine();
