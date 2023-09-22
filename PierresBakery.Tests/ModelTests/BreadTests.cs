@@ -6,29 +6,44 @@ namespace PierresBakery.Models
   [TestClass]
   public class BreadTests
   {
-    // STATIC PRICE PROPERTY
+    // BREAD CONSTRUCTOR
+    [TestMethod]
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
+    {
+      Bread newBread = new Bread();
+
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
+
+    // PRICE PROPERTY
     [TestMethod]
     public void GetPrice_ReturnsPriceOfBread_Int()
     {
-      int price = Bread.Price;
+      Bread newBread = new Bread();
+
+      int price = newBread.Price;
 
       Assert.AreEqual(5, price);
     }
 
-    // STATIC FREE LOAF PROPERTY
+    // FREE LOAF PROPERTY
     [TestMethod]
-    public void GetNthLoafFree_ReturnsNthLoafFree_Int()
+    public void GetNthItemFree_ReturnsNthLoafFree_Int()
     {
-      int nthLoafFree = Bread.NthLoafFree;
+      Bread newBread = new Bread();
 
-      Assert.AreEqual(3, Bread.NthLoafFree);
+      int nthLoafFree = newBread.NthItemFree;
+
+      Assert.AreEqual(3, nthLoafFree);
     }
 
-    // STATIC ORDER METHOD
+    // INHERITED ORDER METHOD
     [TestMethod]
     public void Order_ReturnsCostOfSingleLoaf_Int()
     {
-      int cost = Bread.Order(1); 
+      Bread newBread = new Bread();
+
+      int cost = newBread.Order(1); 
 
       Assert.AreEqual(5, cost);
     }
@@ -36,7 +51,9 @@ namespace PierresBakery.Models
     [TestMethod]
     public void Order_ReturnsTotalCostOfTwoLoaves_Int()
     {
-      int cost = Bread.Order(2);
+      Bread newBread = new Bread();
+
+      int cost = newBread.Order(2);
 
       Assert.AreEqual(10, cost);
     }
@@ -44,7 +61,9 @@ namespace PierresBakery.Models
     [TestMethod]
     public void Order_ReturnsTotalCostOfThreeLoaves_int()
     {
-      int cost = Bread.Order(3);
+      Bread newBread = new Bread();
+
+      int cost = newBread.Order(3);
 
       Assert.AreEqual(10, cost);
     }
@@ -52,7 +71,9 @@ namespace PierresBakery.Models
     [TestMethod]
     public void Order_ReturnsAccurateTotalCostOfManyLoaves_int()
     {
-      int cost = Bread.Order(7);
+      Bread newBread = new Bread();
+
+      int cost = newBread.Order(7);
 
       Assert.AreEqual(25, cost);
     }
