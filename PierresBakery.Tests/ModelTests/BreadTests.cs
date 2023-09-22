@@ -22,6 +22,7 @@ namespace PierresBakery.Models
       Assert.AreEqual(5, newBread.Price);
     }
 
+    // NUMBER OF LOAVES
     [TestMethod]
     public void GetNumberOfLoaves_ReturnsNumberOfLoaves_Int()
     {
