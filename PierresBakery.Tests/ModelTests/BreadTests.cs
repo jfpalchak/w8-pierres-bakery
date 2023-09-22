@@ -6,51 +6,29 @@ namespace PierresBakery.Models
   [TestClass]
   public class BreadTests
   {
-    [TestMethod]
-    public void BreadConstructor_CreatesInstanceOfBread_Bread()
-    {
-      Bread newBread = new Bread(3);
-
-      Assert.AreEqual(typeof(Bread), newBread.GetType());
-    }
-
+    // STATIC PRICE PROPERTY
     [TestMethod]
     public void GetPrice_ReturnsPriceOfBread_Int()
     {
-      Bread newBread = new Bread(3);
+      int price = Bread.Price;
 
-      Assert.AreEqual(5, newBread.Price);
+      Assert.AreEqual(5, price);
     }
 
-    // NUMBER OF LOAVES
+    // STATIC FREE LOAF PROPERTY
     [TestMethod]
-    public void GetNumberOfLoaves_ReturnsNumberOfLoaves_Int()
+    public void GetNthLoafFree_ReturnsNthLoafFree_Int()
     {
-      int numOfLoaves = 3;
-      Bread newBread = new Bread(numOfLoaves);
+      int nthLoafFree = Bread.NthLoafFree;
 
-      int result = newBread.NumberOfLoaves;
-
-      Assert.AreEqual(numOfLoaves, result);
+      Assert.AreEqual(3, Bread.NthLoafFree);
     }
 
-    [TestMethod]
-    public void SetNumberOfLoaves_SetsValueOfNumberOfLoaves_Void()
-    {
-      Bread newBread = new Bread(3);
-      int newOrder = 5;
-
-      newBread.NumberOfLoaves = newOrder;
-      
-      Assert.AreEqual(newOrder, newBread.NumberOfLoaves);
-    }    
-    // ORDER METHOD
+    // STATIC ORDER METHOD
     [TestMethod]
     public void Order_ReturnsCostOfSingleLoaf_Int()
     {
-      Bread newBread = new Bread(1);
-
-      int cost = newBread.Order(); // ! this tells me i probably don't need a constructor
+      int cost = Bread.Order(1); 
 
       Assert.AreEqual(5, cost);
     }
@@ -58,9 +36,7 @@ namespace PierresBakery.Models
     [TestMethod]
     public void Order_ReturnsTotalCostOfTwoLoaves_Int()
     {
-      Bread newBread = new Bread(2);
-
-      int cost = newBread.Order();
+      int cost = Bread.Order(2);
 
       Assert.AreEqual(10, cost);
     }
@@ -68,9 +44,7 @@ namespace PierresBakery.Models
     [TestMethod]
     public void Order_ReturnsTotalCostOfThreeLoaves_int()
     {
-      Bread newBread = new Bread(3);
-
-      int cost = newBread.Order();
+      int cost = Bread.Order(3);
 
       Assert.AreEqual(10, cost);
     }
@@ -78,9 +52,7 @@ namespace PierresBakery.Models
     [TestMethod]
     public void Order_ReturnsAccurateTotalCostOfManyLoaves_int()
     {
-      Bread newBread = new Bread(7);
-
-      int cost = newBread.Order();
+      int cost = Bread.Order(7);
 
       Assert.AreEqual(25, cost);
     }

@@ -4,16 +4,11 @@ namespace PierresBakery.Models
 {
   public class Bread
   {
-    public int Price { get; } = 5;
-    public int NumberOfLoaves { get; set; }
-
-    public Bread(int userOrder)
-    {
-      NumberOfLoaves = userOrder;
-    }
-
+    public static int Price { get; } = 5;
+    public static int NthLoafFree {get; } = 3;
+    
     // calculate total cost of user's bread order
-    public int Order()
+    public static int Order(int NumberOfLoaves)
     {
       // calculate how many loaves in the order is free = 
       // number of loaves in the order / nth loaf of bread that is free (whole integer, rounded down)
