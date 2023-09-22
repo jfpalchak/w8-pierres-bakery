@@ -7,8 +7,8 @@ namespace PierresBakery.Models
 
     public virtual int Order(int numberOfItems)
     {
-      // calculate how many baked good items in the order is free = 
-      // number of items in the order / nth item that is free (whole integer, rounded down)
+      // calculate how many baked good items in the order is free
+      // number of items in the order / nth item that is free = (whole integer, rounded down)
       int freeItems = numberOfItems / NthItemFree;
       // calculate value of discount according to number of free items in user's order
       int discount = Price * freeItems;
