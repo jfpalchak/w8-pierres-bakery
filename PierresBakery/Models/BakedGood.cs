@@ -8,6 +8,10 @@ namespace PierresBakery.Models
 
     public int Order(int numberOfItems)
     {
+      if (numberOfItems < 0)
+      {
+        numberOfItems = 0;
+      }
       // calculate how many baked good items in the order is free
       // number of items in the order / nth item that is free = (whole integer, rounded down)
       int freeItems = numberOfItems / NthItemFree;
