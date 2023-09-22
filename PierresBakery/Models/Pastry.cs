@@ -11,5 +11,10 @@ namespace PierresBakery.Models
     {
       NumberOfPastries = userOrder;
     }
+
+    public int Order()
+    {
+      return Price;
+    }
   }
 }
