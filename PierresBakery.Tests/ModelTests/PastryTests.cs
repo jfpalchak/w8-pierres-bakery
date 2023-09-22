@@ -60,5 +60,21 @@ namespace PierresBakery.Models
 
       Assert.AreEqual(4, newPastry.Order());
     }
+
+    [TestMethod]
+    public void Order_ReturnsCostOfFourPastries_Int()
+    {
+      Pastry newPastry = new Pastry(4);
+
+      Assert.AreEqual(6, newPastry.Order());
+    }
+
+    [TestMethod]
+    public void Order_ReturnsAccurateCostOfManyPastries_Int()
+    {
+      Pastry newPastry = new Pastry(8);
+
+      Assert.AreEqual(12, newPastry.Order());
+    }
   }
 }
