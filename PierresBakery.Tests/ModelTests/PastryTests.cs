@@ -50,9 +50,15 @@ namespace PierresBakery.Models
     {
       Pastry newPastry = new Pastry(1);
 
-      int cost = newPastry.Order(); 
+      Assert.AreEqual(2, newPastry.Order());
+    }
 
-      Assert.AreEqual(2, cost);
+    [TestMethod]
+    public void Order_ReturnsCostOfTwoPastries_Int()
+    {
+      Pastry newPastry = new Pastry(2);
+
+      Assert.AreEqual(4, newPastry.Order());
     }
   }
 }
