@@ -7,10 +7,14 @@ namespace PierresBakery.Models
     public int Price { get; } = 5;
     public int NumberOfLoaves { get; set; }
 
-    // constructor
     public Bread(int userOrder)
     {
       NumberOfLoaves = userOrder;
+    }
+
+    public int Order()
+    {
+      return Price;
     }
   }
 }
