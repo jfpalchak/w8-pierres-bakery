@@ -125,8 +125,9 @@ namespace PierresBakery.Models
       Assert.AreEqual(0, cost);
     }
 
+    // ORDER TOTAL
     [TestMethod]
-    public void Order_UpdatesOrderTotalStaticVariable_Int()
+    public void Order_UpdatesOrderTotalStaticVariableWithEachOrder_Int()
     {
       Bread newBread = new Bread();
 
@@ -136,5 +137,30 @@ namespace PierresBakery.Models
       Assert.IsTrue(firstOrder == 5 && secondOrder == 10);
     }
 
+    [TestMethod]
+    public void GetOrderTotal_ReturnsTotalOrderOfBreadLoaves_Int()
+    {
+      Bread newBread = new Bread();
+
+      int firstOrder = newBread.Order(1);
+      int newOrder = newBread.Order(1);
+
+      Assert.AreEqual(newOrder, newBread.OrderTotal);
+    }
+
+    // CLEAR ORDER METHOD
+    [TestMethod]
+    public void ClearOrder_ResetsTotalOfBreadLoafOrders_Void()
+    {
+      Bread newBread = new Bread();
+
+      int firstOrder = newBread.Order(1);
+      int newOrder = newBread.Order(1);
+      int emptyOrder = 0;
+
+      Bread.ClearOrder();
+
+      Assert.AreEqual(emptyOrder, newBread.OrderTotal);
+    }
   }
 }
