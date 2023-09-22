@@ -2,8 +2,11 @@
 
 namespace PierresBakery.Models
 {
-  public class ClassName
+  public class Pastry
   {
-    // Business logic here.
+    public Pastry()
+    {
+      
+    }
   }
 }
