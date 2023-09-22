@@ -15,6 +15,14 @@ namespace PierresBakery.Models
     }
 
     [TestMethod]
+    public void GetPrice_ReturnsPriceOfBread_Int()
+    {
+      Bread newBread = new Bread(3);
+
+      Assert.AreEqual(5, newBread.Price);
+    }
+
+    [TestMethod]
     public void GetNumberOfLoaves_ReturnsNumberOfLoaves_Int()
     {
       int numOfLoaves = 3;
@@ -34,10 +42,7 @@ namespace PierresBakery.Models
       newBread.NumberOfLoaves = newOrder;
       
       Assert.AreEqual(newOrder, newBread.NumberOfLoaves);
-    }
-
-    // [TestMethod]
-    // public void 
+    }    
 
   }
 }
