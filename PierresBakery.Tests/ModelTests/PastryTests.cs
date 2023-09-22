@@ -1,11 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
+using System;
 
 namespace PierresBakery.Models
 {
   [TestClass]
-  public class PastryTests
+  public class PastryTests : IDisposable
   {
+    // Teardown Interface
+    public void Dispose()
+    {
+      Pastry.ClearOrder();
+    }
+
     // PASTRY CONSTRUCTOR
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
@@ -116,6 +123,17 @@ namespace PierresBakery.Models
       int cost = newPastry.Order(-3);
 
       Assert.AreEqual(0, cost);
+    }
+
+    [TestMethod]
+    public void Order_UpdatesOrderTotalStaticVariable_Int()
+    {
+      Pastry newPastry = new Pastry();
+
+      int firstOrder = newPastry.Order(1);
+      int secondOrder = newPastry.Order(1);
+
+      Assert.IsTrue(firstOrder == 2 && secondOrder == 4);
     }
   }
 }

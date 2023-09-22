@@ -1,11 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
+using System;
 
 namespace PierresBakery.Models
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
+    // Teardown Interface
+    public void Dispose()
+    {
+      Bread.ClearOrder();
+    }
+
     // BREAD CONSTRUCTOR
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
@@ -116,6 +123,17 @@ namespace PierresBakery.Models
       int cost = newBread.Order(-3);
 
       Assert.AreEqual(0, cost);
+    }
+
+    [TestMethod]
+    public void Order_UpdatesOrderTotalStaticVariable_Int()
+    {
+      Bread newBread = new Bread();
+
+      int firstOrder = newBread.Order(1);
+      int secondOrder = newBread.Order(1);
+
+      Assert.IsTrue(firstOrder == 5 && secondOrder == 10);
     }
 
   }
