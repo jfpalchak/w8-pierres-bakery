@@ -14,7 +14,10 @@ namespace PierresBakery.Models
 
     public int Order()
     {
-      return Price * NumberOfPastries;
+      int freePastries = NumberOfPastries / 4;
+      int discount = Price * freePastries;
+      int orderCost = (NumberOfPastries * Price) - discount;
+      return orderCost;
     }
   }
 }
