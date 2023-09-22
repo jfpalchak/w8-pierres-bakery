@@ -14,7 +14,7 @@ namespace PierresBakery.Models
 
     public int Order()
     {
-      return Price;
+      return (Price * NumberOfLoaves);
     }
   }
 }
