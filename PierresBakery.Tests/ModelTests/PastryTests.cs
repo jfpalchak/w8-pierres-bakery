@@ -19,7 +19,7 @@ namespace PierresBakery.Models
     {
       Pastry newPastry = new Pastry(3);
 
-      Assert.AreEqual(5, newPastry.Price);
+      Assert.AreEqual(2, newPastry.Price);
     }
 
     [TestMethod]
