@@ -24,7 +24,7 @@ namespace PierresBakery.Models
       Assert.AreEqual(4, nthPastryFree);
     }
 
-    // ORDER METHOD
+    // STATIC ORDER METHOD
     [TestMethod]
     public void Order_ReturnsCostOfSinglePastry_Int()
     {
