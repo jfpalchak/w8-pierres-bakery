@@ -15,7 +15,7 @@ namespace PierresBakery.Models
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
-    // PRICE PROPERTY
+    // INHERITED PRICE PROPERTY
     [TestMethod]
     public void GetPrice_ReturnsPriceOfBread_Int()
     {
@@ -26,7 +26,18 @@ namespace PierresBakery.Models
       Assert.AreEqual(5, price);
     }
 
-    // FREE LOAF PROPERTY
+    [TestMethod]
+    public void SetPrice_SetsPriceValueOfBread_Void()
+    {
+      Bread newBread = new Bread();
+      int newPrice = 10;
+
+      newBread.Price = newPrice;
+
+      Assert.AreEqual(newPrice, newBread.Price);
+    }
+
+    // INHERITED NTH ITEM FREE PROPERTY
     [TestMethod]
     public void GetNthItemFree_ReturnsNthLoafFree_Int()
     {
@@ -35,6 +46,17 @@ namespace PierresBakery.Models
       int nthLoafFree = newBread.NthItemFree;
 
       Assert.AreEqual(3, nthLoafFree);
+    }
+
+    [TestMethod]
+    public void SetNthItemFree_SetsValueOfNthLoafFree_Void()
+    {
+      Bread newBread = new Bread();
+      int newDeal = 10;
+
+      newBread.NthItemFree = newDeal;
+
+      Assert.AreEqual(newDeal, newBread.NthItemFree);
     }
 
     // INHERITED ORDER METHOD

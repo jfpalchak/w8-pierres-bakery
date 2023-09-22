@@ -6,6 +6,7 @@ namespace PierresBakery.Models
   [TestClass]
   public class BakedGoodTests
   {
-    // [TestMethod]
+    // Can we even test Abstract Classes?
+    // My guess is we test this class via instances of child classes.
   }
 }
