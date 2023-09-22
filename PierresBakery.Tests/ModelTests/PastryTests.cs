@@ -135,5 +135,33 @@ namespace PierresBakery.Models
 
       Assert.IsTrue(firstOrder == 2 && secondOrder == 4);
     }
+
+    // ORDER TOTAL PROPERTY
+    [TestMethod]
+    public void GetOrderTotal_ReturnsTotalOrderOfPastries_Int()
+    {
+      Pastry newPastry = new Pastry();
+
+      int firstOrder = newPastry.Order(1);
+      int newOrder = newPastry.Order(1);
+
+      Assert.AreEqual(newOrder, newPastry.OrderTotal);
+    }
+
+    // CLEAR ORDER METHOD
+    [TestMethod]
+    public void ClearOrder_ResetsTotalOfPastryOrders_Void()
+    {
+      Pastry newPastry = new Pastry();
+
+      int firstOrder = newPastry.Order(1);
+      int secondOrder = newPastry.Order(1);
+      int emptyOrder = 0;
+
+      Pastry.ClearOrder();
+
+      Assert.AreEqual(emptyOrder, newPastry.OrderTotal);
+
+    }
   }
 }
