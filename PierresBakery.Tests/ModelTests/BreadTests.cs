@@ -26,7 +26,7 @@ namespace PierresBakery.Models
     }
 
     [TestMethod]
-    public void SetNumberOfLoaves_ReturnsNumberOfLoaves_Void()
+    public void SetNumberOfLoaves_SetsValueOfNumberOfLoaves_Void()
     {
       Bread newBread = new Bread(3);
       int newOrder = 5;
