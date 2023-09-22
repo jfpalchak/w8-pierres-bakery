@@ -6,76 +6,55 @@ namespace PierresBakery.Models
   [TestClass]
   public class PastryTests
   {
-    [TestMethod]
-    public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
-    {
-      Pastry newPastry = new Pastry(3);
-
-      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
-    }
-
+    // STATIC PRICE
     [TestMethod]
     public void GetPrice_ReturnsPriceOfPastry_Int()
     {
-      Pastry newPastry = new Pastry(3);
+      int price = Pastry.Price;
 
-      Assert.AreEqual(2, newPastry.Price);
+      Assert.AreEqual(2, price);
     }
 
-    // NUMBER OF PASTRIES
+    // STATIC NTH PASTRY FREE
     [TestMethod]
-    public void GetNumberOfPastries_ReturnsNumberOfPastries_Int()
+    public void GetNthPastryFree_ReturnsNthPastryThatIsFree_Int()
     {
-      int numOfPastries = 3;
-      Pastry newPastry = new Pastry(numOfPastries);
+      int nthPastryFree = Pastry.NthPastryFree;
 
-      int result = newPastry.NumberOfPastries;
-
-      Assert.AreEqual(numOfPastries, result);
-    }
-
-    [TestMethod]
-    public void SetNumberOfPastries_SetsValueOfNumberOfPastries_Void()
-    {
-      Pastry newPastry = new Pastry(3);
-      int newOrder = 5;
-
-      newPastry.NumberOfPastries = newOrder;
-
-      Assert.AreEqual(newOrder, newPastry.NumberOfPastries);
+      Assert.AreEqual(4, nthPastryFree);
     }
 
     // ORDER METHOD
     [TestMethod]
     public void Order_ReturnsCostOfSinglePastry_Int()
     {
-      Pastry newPastry = new Pastry(1);
+      int cost = Pastry.Order(1);
 
-      Assert.AreEqual(2, newPastry.Order());
+      Assert.AreEqual(2, cost);
     }
 
     [TestMethod]
     public void Order_ReturnsCostOfTwoPastries_Int()
     {
-      Pastry newPastry = new Pastry(2);
+      int cost = Pastry.Order(2);
 
-      Assert.AreEqual(4, newPastry.Order());
+      Assert.AreEqual(4, cost);
     }
 
     [TestMethod]
     public void Order_ReturnsCostOfFourPastries_Int()
     {
-      Pastry newPastry = new Pastry(4);
+      int cost = Pastry.Order(4);
 
-      Assert.AreEqual(6, newPastry.Order());
+      Assert.AreEqual(6, cost);
     }
 
     [TestMethod]
     public void Order_ReturnsAccurateCostOfManyPastries_Int()
     {
-      Pastry newPastry = new Pastry(8);
+      int cost = Pastry.Order(8);
 
-      Assert.AreEqual(12, newPastry.Order());
+      Assert.AreEqual(12, cost);
     }
   }
 }
