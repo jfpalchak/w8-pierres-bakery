@@ -99,5 +99,15 @@ namespace PierresBakery.Models
 
       Assert.AreEqual(12, cost);
     }
+
+    [TestMethod]
+    public void Order_ReturnsZeroIfOrderNumberIsZeroOrLess_Int()
+    {
+      Pastry newPastry = new Pastry();
+      
+      int cost = newPastry.Order(-3);
+
+      Assert.AreEqual(0, cost);
+    }
   }
 }

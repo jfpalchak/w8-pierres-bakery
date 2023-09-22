@@ -81,7 +81,7 @@ namespace PierresBakery.Models
     }
 
     [TestMethod]
-    public void Order_ReturnsTotalCostOfThreeLoaves_int()
+    public void Order_ReturnsTotalCostOfThreeLoaves_Int()
     {
       Bread newBread = new Bread();
 
@@ -91,13 +91,23 @@ namespace PierresBakery.Models
     }
 
     [TestMethod]
-    public void Order_ReturnsAccurateTotalCostOfManyLoaves_int()
+    public void Order_ReturnsAccurateTotalCostOfManyLoaves_Int()
     {
       Bread newBread = new Bread();
 
       int cost = newBread.Order(7);
 
       Assert.AreEqual(25, cost);
+    }
+
+    [TestMethod]
+    public void Order_ReturnsZeroIfOrderNumberIsZeroOrLess_Int()
+    {
+      Bread newBread = new Bread();
+      
+      int cost = newBread.Order(-3);
+
+      Assert.AreEqual(0, cost);
     }
 
   }
