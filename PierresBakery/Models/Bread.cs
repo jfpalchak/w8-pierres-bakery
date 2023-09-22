@@ -4,7 +4,6 @@ namespace PierresBakery.Models
 {
   public class Bread : BakedGood
   {
-    // create new static field
     // update new static field with inherited virtual property
     private static int _orderTotalBread;
     public override int OrderTotal
@@ -19,6 +18,7 @@ namespace PierresBakery.Models
       NthItemFree = 3;
     }
 
+    // reset total for bread orders
     public static void ClearOrder()
     {
       _orderTotalBread = 0;
