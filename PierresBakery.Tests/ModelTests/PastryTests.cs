@@ -15,6 +15,14 @@ namespace PierresBakery.Models
     }
 
     [TestMethod]
+    public void GetPrice_ReturnsPriceOfPastry_Int()
+    {
+      Pastry newPastry = new Pastry(3);
+
+      Assert.AreEqual(5, newPastry.Price);
+    }
+
+    [TestMethod]
     public void GetNumberOfPastries_ReturnsNumberOfPastries_Int()
     {
       int numOfPastries = 3;
