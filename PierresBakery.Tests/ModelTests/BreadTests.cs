@@ -44,5 +44,14 @@ namespace PierresBakery.Models
       Assert.AreEqual(newOrder, newBread.NumberOfLoaves);
     }    
 
+    [TestMethod]
+    public void Order_ReturnsCostOfSingleLoaf_Int()
+    {
+      Bread newBread = new Bread(1);
+
+      int cost = newBread.Order(); // this tells me i probably don't need a constructor
+
+      Assert.AreEqual(5, cost);
+    }
   }
 }
