@@ -15,6 +15,14 @@ namespace PierresBakery.Models
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
+    [TestMethod]
+    public void BreadConstructor_InheritsFromAbstractClassBakedGood_Bread()
+    {
+      Bread newBread = new Bread();
+
+      Assert.IsTrue(typeof(BakedGood).IsAssignableFrom(newBread.GetType()));
+    }
+
     // INHERITED PRICE PROPERTY
     [TestMethod]
     public void GetPrice_ReturnsPriceOfBread_Int()
