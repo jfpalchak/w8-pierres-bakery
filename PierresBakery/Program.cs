@@ -1,6 +1,7 @@
-//USING DIRECTIVES HERE
+using PierresBakery.Models;
+using System;
 
-namespace ProjectName
+namespace PierresBakery
 {
   class Program
   {

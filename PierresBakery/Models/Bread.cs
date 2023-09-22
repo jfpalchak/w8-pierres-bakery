@@ -1,6 +1,6 @@
 //USING DIRECTIVES HERE
 
-namespace ProjectName.Models
+namespace PierresBakery.Models
 {
   public class ClassName
   {
