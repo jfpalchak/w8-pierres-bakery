@@ -125,8 +125,9 @@ namespace PierresBakery.Models
       Assert.AreEqual(0, cost);
     }
 
+    // ORDER TOTAL
     [TestMethod]
-    public void Order_UpdatesOrderTotalStaticVariable_Int()
+    public void Order_UpdatesOrderTotalStaticVariableWithEachOrder_Int()
     {
       Pastry newPastry = new Pastry();
 
@@ -136,7 +137,6 @@ namespace PierresBakery.Models
       Assert.IsTrue(firstOrder == 2 && secondOrder == 4);
     }
 
-    // ORDER TOTAL PROPERTY
     [TestMethod]
     public void GetOrderTotal_ReturnsTotalOrderOfPastries_Int()
     {
@@ -161,7 +161,6 @@ namespace PierresBakery.Models
       Pastry.ClearOrder();
 
       Assert.AreEqual(emptyOrder, newPastry.OrderTotal);
-
     }
   }
 }
