@@ -7,11 +7,18 @@ namespace PierresBakery
   {
     static void Main()
     {
+      Console.WriteLine("==============================================");
+      Console.WriteLine("Welcome to the order page for Pierre's Bakery!");
+      WriteOrderDisplay();
+      Console.WriteLine("                 ~ Goodbye ~");
+      Console.WriteLine("==============================================");
+    }
+
+    static void WriteOrderDisplay()
+    {
       Bread newBread = new Bread();
       Pastry newPastry = new Pastry();
 
-      Console.WriteLine("==============================================");
-      Console.WriteLine("Welcome to the order page for Pierre's Bakery!");
       Console.WriteLine("The bakery currently has the following items:");
       Console.WriteLine(" ---------------------------------------------");
       Console.WriteLine("|     Bread: {0:C} |    Buy 2, get 1 free!    |", newBread.Price);
@@ -24,19 +31,28 @@ namespace PierresBakery
       Console.WriteLine("Please enter a whole number:");
       string pastryOrderString = Console.ReadLine();
 
-      int breadOrder = int.Parse(breadOrderString);
-      int breadCost = newBread.Order(breadOrder);
-      int pastryOrder = int.Parse(pastryOrderString);
-      int pastryCost = newPastry.Order(pastryOrder);
+      try
+      {
+        int breadOrder = int.Parse(breadOrderString);
+        int breadCost = newBread.Order(breadOrder);
+        int pastryOrder = int.Parse(pastryOrderString);
+        int pastryCost = newPastry.Order(pastryOrder);
 
-      Console.WriteLine("Here's your order:");
-      Console.WriteLine(" ---------------------------------------------");
-      Console.WriteLine("          Bread Order: {0:C}", breadCost);
-      Console.WriteLine("         Pastry Order: {0:C}", pastryCost);
-      Console.WriteLine("     Total Order Cost: {0:C}", breadCost + pastryCost);
-      Console.WriteLine(" ---------------------------------------------");
-
-
+        Console.WriteLine("Here's your order:");
+        Console.WriteLine(" ---------------------------------------------");
+        Console.WriteLine("          Bread Order: {0:C}", breadCost);
+        Console.WriteLine("         Pastry Order: {0:C}", pastryCost);
+        Console.WriteLine("     Total Order Cost: {0:C}", breadCost + pastryCost);
+        Console.WriteLine(" ---------------------------------------------");
+      }
+      catch
+      {
+        Console.WriteLine("!-----------------------------------!");
+        Console.WriteLine("!     Unable to complete order!     !");
+        Console.WriteLine("! Please enter only whole numbers!  !");
+        Console.WriteLine("!-----------------------------------!");
+        WriteOrderDisplay();
+      }
     }
   }
 }
