@@ -13,5 +13,16 @@ namespace PierresBakery.Models
 
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
+
+    [TestMethod]
+    public void GetNumberOfPastries_ReturnsNumberOfPastries_Int()
+    {
+      int numOfPastries = 3;
+      Pastry newPastry = new Pastry(numOfPastries);
+
+      int result = newPastry.NumberOfPastries;
+
+      Assert.AreEqual(numOfPastries, result);
+    }
   }
 }
