@@ -1,5 +1,3 @@
-//USING DIRECTIVES HERE
-
 namespace PierresBakery.Models
 {
   public class Bread : BakedGood
