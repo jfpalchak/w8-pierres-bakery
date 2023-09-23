@@ -40,9 +40,9 @@ namespace PierresBakery
 
         Console.WriteLine("              Here's your order:");
         Console.WriteLine(" ---------------------------------------------");
-        Console.WriteLine("              Bread Order: {0:C}", breadCost);
-        Console.WriteLine("             Pastry Order: {0:C}", pastryCost);
-        Console.WriteLine("         Total Order Cost: {0:C}", breadCost + pastryCost);
+        Console.WriteLine("           Bread Order x {1}: {0:C}", breadCost, newBread.TotalItems);
+        Console.WriteLine("          Pastry Order x {1}: {0:C}", pastryCost, newPastry.TotalItems);
+        Console.WriteLine("          Total Order Cost: {0:C}", breadCost + pastryCost);
         Console.WriteLine(" ---------------------------------------------");
         AskUserToContinue();
       }
