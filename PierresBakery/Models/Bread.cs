@@ -3,11 +3,11 @@ namespace PierresBakery.Models
   public class Bread : BakedGood
   {
     // update new static field with inherited virtual property
-    private static int _orderTotalBread;
-    public override int OrderTotal
+    private static int _totalBreadItems;
+    public override int TotalItems
     {
-      get { return _orderTotalBread; }
-      set { _orderTotalBread = value; }
+      get { return _totalBreadItems; }
+      set { _totalBreadItems = value; }
     }
 
     public Bread()
@@ -19,7 +19,7 @@ namespace PierresBakery.Models
     // reset total for bread orders
     public static void ClearOrder()
     {
-      _orderTotalBread = 0;
+      _totalBreadItems = 0;
     }
   }
 }
