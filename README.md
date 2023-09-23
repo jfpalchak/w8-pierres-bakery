@@ -58,7 +58,6 @@ $ dotnet test
 
 ## Known Bugs
 
-* If the user continues to enter additional purchases to their order, an item's discount will **not** be applied if that item is purchased _individually_.
 * The total number of Bread or Pastry items ordered is not listed in the receipt.
 * If additional bugs are discovered, please contact the author.
 
