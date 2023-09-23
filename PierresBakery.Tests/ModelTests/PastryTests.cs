@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
 using System;
 
-namespace PierresBakery.Models
+namespace PierresBakery.Tests
 {
   [TestClass]
   public class PastryTests : IDisposable
@@ -145,7 +145,7 @@ namespace PierresBakery.Models
       int firstOrder = newPastry.Order(1);
       int newOrder = newPastry.Order(1);
 
-      Assert.AreEqual(newOrder, newPastry.OrderTotal);
+      Assert.AreEqual(2, newPastry.TotalItems);
     }
 
     // CLEAR ORDER METHOD
@@ -156,11 +156,10 @@ namespace PierresBakery.Models
 
       int firstOrder = newPastry.Order(1);
       int secondOrder = newPastry.Order(1);
-      int emptyOrder = 0;
 
       Pastry.ClearOrder();
 
-      Assert.AreEqual(emptyOrder, newPastry.OrderTotal);
+      Assert.AreEqual(0, newPastry.TotalItems);
     }
   }
 }
