@@ -48,10 +48,10 @@ namespace PierresBakery
       }
       catch
       {
-        Console.WriteLine("!-----------------------------------!");
-        Console.WriteLine("!     Unable to complete order!     !");
-        Console.WriteLine("!  Please enter only whole numbers  !");
-        Console.WriteLine("!-----------------------------------!");
+        Console.WriteLine("     !-----------------------------------!");
+        Console.WriteLine("     !     Unable to complete order!     !");
+        Console.WriteLine("     !  Please enter only whole numbers  !");
+        Console.WriteLine("     !-----------------------------------!");
         WriteOrderDisplay();
       }
     }
