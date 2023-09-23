@@ -127,7 +127,7 @@ namespace PierresBakery.Tests
 
     // ORDER TOTAL
     [TestMethod]
-    public void Order_UpdatesOrderTotalStaticVariableWithEachOrder_Int()
+    public void Order_UpdatesTotalItemsStaticVariableWithEachOrder_Int()
     {
       Pastry newPastry = new Pastry();
 
@@ -138,7 +138,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void GetOrderTotal_ReturnsTotalOrderOfPastries_Int()
+    public void GetTotalItems_ReturnsTotalOrderOfPastries_Int()
     {
       Pastry newPastry = new Pastry();
 
