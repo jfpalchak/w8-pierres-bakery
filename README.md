@@ -13,7 +13,7 @@
 
 ## Description
 
-Welcome to "Pierre's Bakery" Console Application! This C# project provides a simple command-line interface for ordering baked goods from Pierre's Bakery, where user's can take advantage of the bakery's special deals: "Buy 2 loaves of bread, get 1 free", and "Buy 3 pastries, get 1 free"! 
+Welcome to "Pierre's Bakery" Console Application! This C# project provides a simple command-line interface for ordering baked goods from Pierre's Bakery, where user's can take advantage of the bakery's special deals.
 
 Upon starting the application, the user is prompted with entering their desired amount of bread loaves and pastries. After submitting their order, the application calculates their order's total, including any applicable discounts. Should the user wish to continue adding items, or otherwise exit the application, they will then be prompted to do so.
 
@@ -24,7 +24,7 @@ Order Cost = (Number of Items * Price of Item) - Discount
 ```
 where
 ```
-Discount = Price of Item * (Number of Items / nth Item that is Free)
+Discount = Price of Item * Floor(Number of Items / nth Item that is Free)
 ```
 and
 ```
