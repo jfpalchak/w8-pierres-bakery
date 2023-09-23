@@ -6,8 +6,7 @@ namespace PierresBakery.Models
     public int Price { get; set; }
     public int NthItemFree { get; set; }
 
-    // create static field
-    // update field with virtual property
+    // update static field with virtual property
     private static int _totalItems;
     public virtual int TotalItems 
     { 
@@ -15,6 +14,7 @@ namespace PierresBakery.Models
       set { _totalItems = value; }
     }
 
+    // method to calculate cost of user's order
     public int Order(int numberOfItems)
     {
       if (numberOfItems < 0)
@@ -24,7 +24,7 @@ namespace PierresBakery.Models
       // update static variable
       TotalItems += numberOfItems;
       // calculate how many baked good items in the order are free:
-      // number of items in the order / nth item that is free = (whole integer, rounded down)
+      // floor of (number of items in the order / nth item that is free)
       int freeItems = TotalItems / NthItemFree;
       // calculate value of discount according to number of free items in user's order
       int discount = Price * freeItems;
