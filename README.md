@@ -8,7 +8,6 @@
 
 * C#
 * .NET 6
-* NuGet Package Manager
 * MSTest
 
 ## Description
