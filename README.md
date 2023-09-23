@@ -58,8 +58,7 @@ $ dotnet test
 
 ## Known Bugs
 
-* The total number of Bread or Pastry items ordered is not listed in the receipt.
-* If additional bugs are discovered, please contact the author.
+* If any bugs are discovered, please contact the author.
 
 ## License
 
