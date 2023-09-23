@@ -6,7 +6,8 @@ namespace PierresBakery.Models
     public int Price { get; set; }
     public int NthItemFree { get; set; }
 
-    // update static field with virtual property
+    // static field with virtual property
+    // allows a derived class to update its own static field
     private static int _totalItems;
     public virtual int TotalItems 
     { 

@@ -10,6 +10,7 @@ namespace PierresBakery.Models
       set { _totalPastryItems = value; }
     }
 
+    // pastry constructor sets inherited properties
     public Pastry()
     {
       Price = 2;
