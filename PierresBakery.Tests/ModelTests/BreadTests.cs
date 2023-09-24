@@ -148,6 +148,19 @@ namespace PierresBakery.Tests
       Assert.AreEqual(2, newBread.TotalItems);
     }
 
+    [TestMethod]
+    public void SetTotalItems_SetsValueOfTotalNumberOfBreadLoaves_Void()
+    {
+      Bread newBread = new Bread();
+      int initialCount = newBread.TotalItems;
+      int newCount = 10;
+
+      newBread.TotalItems = newCount;
+
+      Assert.AreEqual(0, initialCount);
+      Assert.AreEqual(newCount, newBread.TotalItems);
+    }
+
     // CLEAR ORDER METHOD
     [TestMethod]
     public void ClearOrder_ResetsTotalOfBreadLoafOrders_Void()
