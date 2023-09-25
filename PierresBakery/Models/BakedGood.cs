@@ -5,7 +5,6 @@ namespace PierresBakery.Models
     // auto-implemented properties
     public int Price { get; set; }
     public int NthItemFree { get; set; }
-
     // static field with virtual property
     // allows a derived class to update its own static field
     private static int _totalItems;
@@ -24,12 +23,9 @@ namespace PierresBakery.Models
       }
       // update static variable
       TotalItems += numberOfItems;
-      // calculate how many baked good items in the order are free:
-      // floor of (number of items in the order / nth item that is free)
+      // number of free items in order = floor of (number of items in the order / nth item that is free)
       int freeItems = TotalItems / NthItemFree;
-      // calculate value of discount according to number of free items in user's order
       int discount = Price * freeItems;
-      // calculate order's total cost and subtract discount
       int orderCost = (TotalItems * Price) - discount;
 
       return orderCost;
